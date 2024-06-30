@@ -1,0 +1,158 @@
+<div class="top-bar" *ngIf="!isSearchVisibleMb">
+  <div class="navbar">
+    <img class="img-menu" src="../../../assets/images/menu.svg" />
+    <div class="logo">
+      <img src="../../../assets/images/logo.svg" alt="" />
+    </div>
+
+    <nav class="nav-links" screenSize [showOnMobile]="false">
+      <span>
+        <img src="../../../assets/images/link.svg" alt="" />
+        <span class="nav-text">Ссылки</span></span
+      >
+      <span>
+        <img src="../../../assets/images/contacts.svg" alt="" />
+        <span class="nav-text">Контакты</span>
+      </span>
+      <span>
+        <img src="../../../assets/images/tag.svg" alt="" />
+        <span class="nav-text">Теги</span></span
+      >
+      <span>
+        <img src="../../../assets/images/favorites.svg" alt="" />
+        <span class="nav-text">Избранное</span></span
+      >
+      <span>
+        <img src="../../../assets/images/history.svg" alt="" />
+        <span class="nav-text">Посещения</span></span
+      >
+    </nav>
+
+    <nav class="nav-links-adaptive" screenSize [showOnMobile]="true">
+      <img class="add" src="../../../assets/images/add2.svg" />
+      <img src="../../../assets/images/history.svg" />
+      <img
+        src="../../../assets/images/search.svg"
+        (click)="toggleSearchVisibilityMd()"
+      />
+      <img src="../../../assets/images/notifications-mb.svg" />
+    </nav>
+
+    <div class="block-search-input">
+      <div class="wrapper-search-input">
+        <input
+          #searchInput
+          [ngClass]="{
+            'search-input-show': isSearchVisible || isFilterVisible,
+            'search-input-hide': !isSearchVisible && !isFilterVisible
+          }"
+          class="search-input"
+          type="text"
+          placeholder="Поисковый запрос"
+          (click)="openFilter($event)"
+        />
+
+        <div #filterContainer class="filter-menu" *ngIf="isFilterVisible">
+          <filter-menu></filter-menu>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <img
+          #searchBox
+          class="search"
+          [ngStyle]="{ visibility: isSearchVisible ? 'hidden' : 'visible' }"
+          src="../../../assets/images/search.svg"
+          (click)="toggleSearchVisibility()"
+        />
+        <br />
+        <img class="add" src="../../../assets/images/add2.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <profile></profile>
+</div>
+
+<div
+  class="block-search-input-mb"
+  *ngIf="isSearchVisibleMb"
+  screenSize
+  [showOnMobile]="true"
+>
+  <div class="wrapper-search-input-mb">
+    <img
+      class="vector"
+      src="../../../assets/images/vector.svg"
+      (click)="toggleSearchVisibilityMd()"
+    />
+    <input
+      class="search-input-mb"
+      type="text"
+      placeholder="Поиск"
+      (click)="openFilter($event)"
+    />
+    <div class="filter-menu">
+      <div class="filter-content">
+        <div class="filter-list">
+          <div>
+            <div class="wrapper-search-author">
+              <label for="author">Автор</label>
+              <input
+                class="search-author"
+                type="text"
+                placeholder="Имя или должность"
+              />
+              <span class="show-selection">Я</span>
+            </div>
+          </div>
+          <div class="filter-checkbox-block">
+            <div class="filter-checkbox">
+              <div class="circle-block">
+                <div class="circle">
+                  <div class="checkmark"></div>
+                </div>
+                <div class="circle-text">Я участник</div>
+              </div>
+              <div class="circle-block">
+                <div class="circle">
+                  <div class="checkmark"></div>
+                </div>
+                <div class="circle-text">Строгий поиск</div>
+              </div>
+              <div class="circle-block">
+                <div class="circle">
+                  <div class="checkmark"></div>
+                </div>
+                <div class="circle-text">В заголовке</div>
+              </div>
+            </div>
+            <br />
+            <div><span>Только</span></div>
+            <br />
+            <div class="filter-checkbox">
+              <div class="circle-block">
+                <div class="circle">
+                  <div class="checkmark"></div>
+                </div>
+                <div class="circle-text">Теги</div>
+              </div>
+              <div class="circle-block">
+                <div class="circle">
+                  <div class="checkmark"></div>
+                </div>
+                <div class="circle-text">Просьба</div>
+              </div>
+              <div class="circle-block">
+                <div class="circle">
+                  <div class="checkmark"></div>
+                </div>
+                <div class="circle-text">Контакты</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

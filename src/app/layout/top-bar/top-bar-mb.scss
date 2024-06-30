@@ -1,0 +1,142 @@
+@media screen and (max-width: 900px) {
+  .nav-text {
+    display: none !important;
+  }
+
+  .profile {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top-bar {
+    padding-bottom: 2px;
+  }
+  .logo {
+    font-size: 1px;
+    margin-right: 32px;
+    margin-left: 8px;
+  }
+
+  .nav-links-adaptive {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .block-search-input-mb {
+    padding-top: 10px;
+  }
+
+  .block-search-input {
+    display: none;
+  }
+
+  .add {
+    margin-right: 15px;
+  }
+
+  .img-menu {
+    display: block;
+    margin-right: 7px;
+  }
+
+  .search-input-mb {
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    padding: 3px;
+    padding-left: 34px;
+    font-size: 16px;
+    width: 280px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+
+  .filter-menu {
+    width: 342px;
+    position: static;
+  }
+
+  .filter-list {
+    padding: 0;
+  }
+
+  .filter-checkbox {
+    flex-direction: column;
+  }
+
+  .search-author {
+    outline: none;
+    border: 1px solid rgb(215, 214, 214);
+    width: 345px !important;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  .wrapper-search-author {
+    width: 382;
+    margin-left: 10px;
+  }
+
+  .show-selection {
+    right: -34px;
+  }
+
+  .filter-checkbox-block {
+    margin-left: 35px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .checkmark {
+    width: 6px;
+    height: 10px;
+    display: inline-block;
+    border-right: 2px solid #7f878c;
+    border-bottom: 2px solid #7f878c;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .circle-block {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .circle-text {
+    margin-top: 6px;
+  }
+
+  .vector {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

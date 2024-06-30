@@ -1,0 +1,11 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .profile {
+    display: none;
+  }
+}
